@@ -19,14 +19,14 @@ function respond() {
   }
 }
 
-var job = new CronJob('0 0 0 * * *', function() {
+/*var job = new CronJob('0 0 0 * * *', function() {
  //will run every day at 12:00 AM
   this.res.writeHead(200);
   postMessage();
   this.res.end();
-})
+})*/
 
-var job = new CronJob('00 47 16 * * 1-5', function() {
+var job = new CronJob('00 30 11 * * 1-5', function() {
  //will run every day at 12:00 AM
   this.res.writeHead(200);
   postMessage();
