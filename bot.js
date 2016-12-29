@@ -26,12 +26,30 @@ function respond() {
   this.res.end();
 })*/
 
-var job = new CronJob('00 08 11 * * 1-5', function() {
+var job = new CronJob('00 32 11 * * 1-5', function() {
  //will run every day at 12:00 AM
   this.res.writeHead(200);
   postMessage();
   this.res.end();
 })
+
+var CronJob = require('cron').CronJob;
+var job = new CronJob({
+  cronTime: '00 32 11 * * 1-5',
+  onTick: function() {
+    this.res.writeHead(200);
+  postMessage();
+  this.res.end();
+    /*
+     * Runs every weekday (Monday through Friday)
+     * at 11:30:00 AM. It does not run on Saturday
+     * or Sunday.
+     */
+  },
+  start: false,
+  timeZone: 'London'
+});
+job.start();
 
 function postMessage() {
   var botResponse, options, body, botReq;
