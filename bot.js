@@ -27,16 +27,11 @@ function respond() {
 })*/
 
 var job = new CronJob({
-  cronTime: '00 39 11 * * 1-5',
+  cronTime: '00 46 11 * * 1-5',
   onTick: function() {
-  this.res.writeHead(200);
-  postMessage();
-  this.res.end();
-    /*
-     * Runs every weekday (Monday through Friday)
-     * at 11:30:00 AM. It does not run on Saturday
-     * or Sunday.
-     */
+    this.res.writeHead(200);
+    postMessage();
+    this.res.end();
   },
   start: false,
   timeZone: 'Europe/London'
