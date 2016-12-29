@@ -27,7 +27,7 @@ function respond() {
 })*/
 
 var job = new CronJob({
-  cronTime: '00 46 11 * * 1-5',
+  cronTime: '00 50 12 * * 1-5',
   onTick: function() {
     this.res.writeHead(200);
     postMessage();
