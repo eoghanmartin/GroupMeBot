@@ -26,7 +26,7 @@ function respond() {
   this.res.end();
 })*/
 
-var job = new CronJob('00 08 18 * * 1-5', function() {
+var job = new CronJob('00 08 11 * * 1-5', function() {
  //will run every day at 12:00 AM
   this.res.writeHead(200);
   postMessage();
