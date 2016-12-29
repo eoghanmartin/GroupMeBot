@@ -35,7 +35,7 @@ var job = new CronJob('00 32 11 * * 1-5', function() {
 
 var CronJob = require('cron').CronJob;
 var job = new CronJob({
-  cronTime: '00 34 11 * * 1-5',
+  cronTime: '00 36 11 * * 1-5',
   onTick: function() {
     this.res.writeHead(200);
   postMessage();
@@ -47,7 +47,7 @@ var job = new CronJob({
      */
   },
   start: false,
-  timeZone: 'London'
+  timeZone: 'Europe/London'
 });
 job.start();
 
