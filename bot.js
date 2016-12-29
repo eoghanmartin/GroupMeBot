@@ -26,18 +26,10 @@ function respond() {
   this.res.end();
 })*/
 
-var job = new CronJob('00 32 11 * * 1-5', function() {
- //will run every day at 12:00 AM
-  this.res.writeHead(200);
-  postMessage();
-  this.res.end();
-})
-
-var CronJob = require('cron').CronJob;
 var job = new CronJob({
-  cronTime: '00 36 11 * * 1-5',
+  cronTime: '00 39 11 * * 1-5',
   onTick: function() {
-    this.res.writeHead(200);
+  this.res.writeHead(200);
   postMessage();
   this.res.end();
     /*
